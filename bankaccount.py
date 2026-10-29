@@ -18,6 +18,6 @@ class BankAccount:
             with_amount = float(input("Enter the amount to withdraw: $"))
         self.balance = self.balance - with_amount
     def view_acount(self):
-        print(f"Name: {self.name}")
+        print(f"\nName: {self.name}")
         print(f"Account Number: {self.account_number}")
-        print(f"Balance: ${self.balance:,.2f}")
+        print(f"Balance: ${self.balance:,.2f}\n")

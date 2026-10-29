@@ -7,14 +7,19 @@ user_name = input("Welcome to the Bank! Please enter your name: ")
 account_info = BankAccount(user_name)
 
 #Display opening menu
-menu_choice = int(input("Please choose an option: \n1. Make a deposit \n2. Make a withdrawal \n3. View account information \n4. Quit"))
-
+menu_choice = int(input("Please choose an option: \n1. Make a deposit \n2. Make a withdrawal \n3. View account information \n4. Quit \n:"))
 
 while menu_choice != 4:
     if menu_choice == 1:
-        make_deposit()
-#1. Make a deposit
-#2. Make a Withdraw
-#3. See account balance
-#4. Quit
+        account_info.make_deposit()
+    elif menu_choice == 2:
+        account_info.make_withdrawal()
+    elif menu_choice == 3:
+        account_info.view_acount()
+    else:
+        print("Invalid option, please try again")
+    
+    #Display opening menu
+    menu_choice = int(input("Please choose an option: \n1. Make a deposit \n2. Make a withdrawal \n3. View account information \n4. Quit \n:"))
+
 
